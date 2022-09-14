@@ -1,0 +1,39 @@
+<div class="card my-5">
+  <div class="card-body">
+    <table class="table table-bordered table-striped">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">You {{ playerName }} (Score: {{ player.score }} {{ player.name }} )</th>
+          <th scope="col"></th>
+          <th scope="col">The Computer</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+          <button (click)="onPlay('rock')" ><img src="../../assets/irock.png" class="clickable-img-class"></button>
+          <br>
+          <button (click)="onPlay('paper')" ><img src="../../assets/ipaper.png" class="clickable-img-class"></button>
+          <br>
+          <button (click)="onPlay('scissors')" ><img src="../../assets/iscissors.png" class="clickable-img-class"></button>
+          <br>
+          <!-- <a (click)="onPlay()"> <img src="../../assets/irock.png" class="play-img-class"/></a> -->
+          </td>
+          <td></td>
+          <td>
+          {{ computerMessage }}
+          <br><br>
+          <img [src]="computerChoice" class="play-img-class"/>
+          </td>
+        </tr>
+        <tr><br></tr>
+        <tr>
+          <td [attr.colspan]="3">
+          {{ playResultMessage }}<br>
+          <img [src]="playResultImage" class="result-img-class"/>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

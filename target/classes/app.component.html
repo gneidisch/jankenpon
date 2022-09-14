@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card bg-dark my-5">
+        <div class="card-body">
+          <h2 class="card-title text-center text-white py-3">{{ title }}</h2>
+          <ul>
+            <li class="list-inline-item">
+              <h3 class="card-title text-center text-white py-3">最初はグー、じゃんけんぽん！</h3>
+            </li>
+          </ul>
+          <ul>
+            <li class="list-inline-item">
+              <form (ngSubmit)="onSubmitPlay()" #playerForm="ngForm">
+                <div class="form-group">
+                  <input type="text" [(ngModel)]="player.name" 
+                     class="form-control"
+                     id="name"
+                     name="name"
+                     placeholder="Name"
+                     required #name="ngModel">
+                </div>
+                <div [hidden]="!name.pristine" class="alert alert-danger">Name is required</div>
+                <button type="submit" [disabled]="!playerForm.form.valid"
+                    class="btn btn-info">Play</button>
+              </form>
+            </li>
+          </ul>
+          <ul>
+            <li class="list-inline-item">
+              <a routerLink="/playerList" class="btn btn-info">Players</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

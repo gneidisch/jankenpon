@@ -1,0 +1,16 @@
+.clickable-img-class{
+      width: 100px!important;
+      min-width: unset!important;
+}
+.play-img-class{
+      width: 100px!important;
+      min-width: unset!important;
+}
+.result-img-class{
+      width: 256px!important;
+      min-width: unset!important;
+}
+td, th {
+    text-align: center !important;
+    vertical-align: middle !important;
+}
